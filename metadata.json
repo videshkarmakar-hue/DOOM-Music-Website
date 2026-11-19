@@ -1,0 +1,8 @@
+{
+  "name": "DOOM - Music",
+  "description": "One of the best lightweight alternatives for Spotify & YouTube Music streaming, optimized for low-end Android devices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

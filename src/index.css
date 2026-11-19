@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --color-slate-canvas: #495057;
+  --color-charcoal-surface: #1A1D20;
+  --color-charcoal-elevated: #212529;
+  --color-slate-muted: #ADB5BD;
+  --color-slate-edge: #6C757D;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #495057;
+    color: #F8F9FA;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Reference-accurate matte 3D shaded architectural sphere */
+.matte-sphere {
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle at 30% 24%,
+    #68717a 0%,
+    #434a51 34%,
+    #24282c 68%,
+    #141618 100%
+  );
+  box-shadow:
+    inset -10px -14px 28px rgba(0, 0, 0, 0.72),
+    inset 4px 6px 14px rgba(255, 255, 255, 0.08),
+    0 24px 48px rgba(0, 0, 0, 0.48);
+}
+
+.matte-sphere-sm {
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle at 32% 26%,
+    #78818a 0%,
+    #495057 42%,
+    #202427 80%,
+    #131517 100%
+  );
+  box-shadow:
+    inset -4px -5px 10px rgba(0, 0, 0, 0.75),
+    0 10px 22px rgba(0, 0, 0, 0.45);
+}
+
+/* Subtle architectural dot matrix matching the reference backdrop */
+.reference-dot-grid {
+  background-image: radial-gradient(rgba(173, 181, 189, 0.24) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
